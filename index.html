@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramaya Clothing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=12" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Open navigation">☰</button>
+      <a class="brand" href="#home" aria-label="Ramaya home">Ramaya</a>
+      <nav class="nav-links" data-nav aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#latest">Latest</a>
+        <a href="#collections">Collections</a>
+        <a href="#story">Our Story</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-icon" href="#wishlist" aria-label="Wishlist">♡<span data-wishlist-count>0</span></a>
+        <button class="header-icon cart-button bag-icon" type="button" data-cart-open aria-label="Shopping bag"><span data-cart-count>0</span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="campaign-hero page-view" data-view="home" aria-label="Ramaya campaign">
+        <div class="campaign-slide active"><img src="assets/mogra-campaign.png" alt="Ramaya campaign with modern handblock printed silhouettes" /></div>
+        <div class="campaign-slide"><img src="assets/ramaya-hero.png" alt="Ramaya campaign studio look with handblock print clothing" /></div>
+        <div class="campaign-slide"><img src="assets/product-overlay.png" alt="Ramaya modern printed overlay campaign look" /></div>
+        <div class="campaign-copy">
+          <p class="eyebrow">Ramaya Clothing</p>
+          <h1>Modern cuts, timeless art</h1>
+          <a class="primary-link" href="#latest">Shop the campaign</a>
+        </div>
+      </section>
+
+      <section class="shop-section page-view" id="latest" data-view="home" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest Collection</p>
+            <h2 id="latest-title">Mogra</h2>
+          </div>
+          <div class="rail-controls">
+            <button class="arrow-button" type="button" data-scroll-target="latest" data-scroll-dir="-1" aria-label="Previous latest products">‹</button>
+            <button class="arrow-button" type="button" data-scroll-target="latest" data-scroll-dir="1" aria-label="Next latest products">›</button>
+          </div>
+        </div>
+        <div class="product-rail" data-product-grid data-rail="latest"></div>
+      </section>
+
+      <section class="collections-section page-view" id="collections" data-view="home" aria-labelledby="collections-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Explore</p>
+            <h2 id="collections-title">All Collections</h2>
+          </div>
+          <div class="rail-controls">
+            <button class="arrow-button" type="button" data-scroll-target="collections" data-scroll-dir="-1" aria-label="Previous collections">‹</button>
+            <button class="arrow-button" type="button" data-scroll-target="collections" data-scroll-dir="1" aria-label="Next collections">›</button>
+          </div>
+        </div>
+        <div class="collection-rail" data-collection-grid data-rail="collections"></div>
+      </section>
+
+      <section class="craft-section page-view" id="story" data-view="home" aria-labelledby="story-title">
+        <div class="craft-copy">
+          <p class="eyebrow">Our Story</p>
+          <h2 id="story-title">Rooted prints, reimagined for now.</h2>
+          <p>Ramaya brings traditional handblock-inspired artwork into modern silhouettes made for everyday ease, travel, occasions, and future collections across categories. The mood stays quiet, premium, and wearable: soft color, refined cuts, and prints that feel like art without becoming loud.</p>
+        </div>
+        <div class="story-points" aria-label="Ramaya essentials">
+          <div><span>01</span><h3>Modern cuts</h3><p>Clean shapes lead the design, so each piece feels current first.</p></div>
+          <div><span>02</span><h3>Timeless art</h3><p>Handblock-inspired motifs keep the craft language rooted and collectible.</p></div>
+          <div><span>03</span><h3>Quiet premium</h3><p>Glacier, ivory, clay, bisque, chambray, and soft brown hold the brand together.</p></div>
+        </div>
+      </section>
+
+      <section class="wishlist-page page-view" data-view="wishlist" hidden>
+        <div class="page-heading">
+          <p class="eyebrow">Saved Pieces</p>
+          <h1>Wishlist</h1>
+          <p data-wishlist-empty>Your wishlist is empty. Save pieces from the latest collection to keep them here.</p>
+        </div>
+        <div class="product-rail wishlist-grid" data-wishlist-grid></div>
+      </section>
+
+      <section class="product-page page-view" data-view="product" hidden>
+        <button class="back-link" type="button" data-back>← Back to shop</button>
+        <div data-product-detail></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="#home">Ramaya</a>
+        <p>Modern cuts, timeless art.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <a href="#latest">Latest Collection</a>
+        <a href="#collections">All Collections</a>
+        <a href="#wishlist">Wishlist</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="#story">Our Story</a>
+        <a href="mailto:hello@ramaya.in">Contact</a>
+        <a href="#home">Shipping & Returns</a>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="#home">Pinterest</a>
+        <a href="#home">Newsletter</a>
+      </div>
+    </footer>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Shopping bag">
+      <div class="cart-panel">
+        <div class="cart-head">
+          <h2>Your Bag</h2>
+          <button class="icon-button" type="button" data-cart-close aria-label="Close bag">&times;</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <div class="cart-empty" data-cart-empty>Your bag is empty.</div>
+        <div class="cart-footer">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <strong data-cart-total>Rs. 0</strong>
+          </div>
+          <button class="checkout" type="button">Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <script src="script.js?v=12"></script>
+  </body>
+</html>
